@@ -1,0 +1,21 @@
+<app-header></app-header>
+
+<section class="todoapp">
+  <app-todo-list-header (add)="onAddTodo($event)" (search)="onSearch($event)"></app-todo-list-header>
+  <app-todo-list [todos]="searchedTodos" (toggleComplete)="onToggleTodoComplete($event)" (update)="onUpdateTodo($event)" (remove)="onRemoveTodo($event)"></app-todo-list>
+  <app-todo-list-footer [todos]="todos"></app-todo-list-footer>
+</section>
+
+<div class="container">
+    <div class="row edit-profile-row">
+      <div class="col-md-12">
+        <button (click)="doEditProfile()" class="btn">Edit profile</button>
+      </div>
+    </div>
+    <div class="row sign-out-row">
+      <div class="col-md-12">
+        <button (click)="doSignOut()" class="btn">Sign out</button>
+      </div>
+    </div>
+</div>
+

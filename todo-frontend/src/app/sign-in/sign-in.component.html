@@ -1,0 +1,70 @@
+<div class="container">
+  <form [formGroup]="frm">
+    <div class="row">
+      <div class="col-md-12">
+
+        <h1>Sign In</h1>
+
+        <!-- Email input -->
+        <input type="text" formControlName="email" placeholder="Your email">
+
+        <!-- Email validation message -->
+        <div
+          class="input-errors"
+          *ngIf="(frm.get('email').invalid && frm.get('email').touched) || showInputErrors"
+        >
+          <div *ngIf="frm.get('email').hasError('required')">
+            Please enter your email
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+
+        <!-- Password input -->
+        <input type="password" formControlName="password" placeholder="Your password">
+
+        <!-- Password validation message -->
+        <div
+          class="input-errors"
+          *ngIf="(frm.get('password').invalid && frm.get('password').touched) || showInputErrors"
+        >
+          <div *ngIf="frm.get('password').hasError('required')">
+            Please enter your password
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+
+        <!-- Sign-in error message -->
+        <div class="sign-in-error" *ngIf="hasFailed">
+          Invalid username and password.
+        </div>
+
+        <!-- Sing-in button -->
+        <button (click)="doSignIn()" [disabled]="isBusy" class="btn btn-primary">
+          <ng-template [ngIf]="!isBusy">Sign in</ng-template>
+          <ng-template [ngIf]="isBusy">Signing in, please wait...</ng-template>
+        </button>
+
+      </div>
+    </div>
+
+  </form>
+</div>
+
+<div class="container register-container">
+    <div class="row">
+      <div class="col-md-12">
+
+          <button (click)="navRegister()" class="btn">Register
+          </button>
+
+      </div>
+    </div>
+</div>

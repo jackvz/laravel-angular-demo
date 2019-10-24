@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-4">
+	  <input class="toggle" type="checkbox" (click)="toggleTodoComplete(todo)" [checked]="todo.complete">
+    </div>
+    <div class="col-xs-4">
+    <input [(ngModel)]="todo.title" (keyup)="updateTodo()">
+    </div>
+    <div class="col-xs-4">
+	  <button class="destroy" (click)="removeTodo(todo)" class="btn">Remove</button>
+    </div>
+  </div>
+</div>

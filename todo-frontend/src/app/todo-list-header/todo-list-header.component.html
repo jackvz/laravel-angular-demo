@@ -1,0 +1,19 @@
+<header class="header">
+  <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1>Todo</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <input placeholder="What needs to be done?" autofocus="" [(ngModel)]="newTodo.title" (keyup.enter)="addTodo()">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <input placeholder="Search todo items" [(ngModel)]="searchTerm" (keyup)="doSearch()">
+        </div>
+      </div>
+  </div>
+</header>
