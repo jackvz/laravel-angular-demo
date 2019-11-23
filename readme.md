@@ -1,4 +1,4 @@
-# Todo Application
+# [Laravel](https://laravel.com/) and [Angular](https://angular.io/) Demo
 
 ## Requirements
 
@@ -33,11 +33,6 @@
 4. Search To Do List 
 
   4.1. The user must be able to search for a specific To Do item  
-
-## Built with
-
-- [Angular](https://angular.io/)
-- [Laravel](https://laravel.com/)
 
 ## Setup
 
