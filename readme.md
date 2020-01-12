@@ -96,7 +96,7 @@ cd ..
 
 ```shell
 cd todo-frontend
-ng build --prod --base-href /fullstacktest/
+ng build --prod --base-href /laravel-angular-demo/
 cd ..
 ```
 
